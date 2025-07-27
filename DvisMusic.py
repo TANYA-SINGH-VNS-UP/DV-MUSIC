@@ -17,8 +17,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from motor.motor_asyncio import AsyncIOMotorClient as _mongo_async_
 
 from pyrogram import Client, filters as pyrofl
-from pytgcalls import PyTgCalls, filters as pytgfl
-
+from pytgcalls import PyTgCalls
 
 from pyrogram import idle, __version__ as pyro_version
 from pytgcalls.__version__ import __version__ as pytgcalls_version
