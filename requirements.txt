@@ -13,3 +13,4 @@ tgcrypto==1.2.5
 youtube-search-python
 yt-dlp==2024.12.15.232913.dev0
 git+https://github.com/KurimuzonAkuma/pyrogram
+ntgcalls==2.0.5
