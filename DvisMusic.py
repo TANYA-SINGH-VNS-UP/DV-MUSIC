@@ -1479,12 +1479,11 @@ async def stop_stream_and_leave_vc(client, message):
             return
 
 
-@call.on_update(pytgfl.chat_update(ChatUpdate.Status.CLOSED_VOICE_CHAT))
-@call.on_update(pytgfl.chat_update(ChatUpdate.Status.KICKED))
-@call.on_update(pytgfl.chat_update(ChatUpdate.Status.LEFT_GROUP))
+@call.on_update(fl.chat_update(ChatUpdate.Status.CLOSED_VOICE_CHAT))
+@call.on_update(fl.chat_update(ChatUpdate.Status.KICKED))
+@call.on_update(fl.chat_update(ChatUpdate.Status.LEFT_GROUP))
 async def stream_services_handler(_, update: Update):
-    chat_id = update.chat_id
-    return await close_stream(chat_id)
+    return await close_stream(update.chat_id)
 
 
 @call.on_update(pytgfl.stream_end())
